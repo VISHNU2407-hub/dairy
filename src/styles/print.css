@@ -1,0 +1,48 @@
+/* =========================================================
+   styles/print.css — print styles for diary entries
+   (restored from the last known-good build bundle)
+   ========================================================= */
+@media print {
+  @page {
+  margin:14mm 12mm}
+html,body {
+  background:#fff!important;
+  color-adjust:exact;
+  -webkit-print-color-adjust:exact;
+  print-color-adjust:exact}
+body:before {
+  display:none!important}
+body * {
+  visibility:hidden}
+.diary-stage,.diary-stage * {
+  visibility:visible}
+.diary-stage {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  margin:0}
+.diary-frame {
+  box-shadow:none!important;
+  border-radius:0}
+.diary-frame:before,.diary-frame:after,.bookmark {
+  display:none!important}
+.diary-page {
+  box-shadow:none!important;
+  border-radius:0;
+  min-height:0;
+  overflow:visible!important;
+  padding:0}
+.diary-page:after {
+  display:none!important}
+.page-inner {
+  max-width:100%}
+.p-textarea {
+  overflow:visible;
+  min-height:0;
+  border:none}
+.p-textarea[hidden],.page-tools,.page-toolbar,.prompt-box,.toast-root,.skip-link {
+  display:none!important}
+button,.icon-btn {
+  -webkit-appearance:none}
+}

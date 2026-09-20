@@ -37,7 +37,7 @@ function gridBuild(year, month1) {
   return cells;
 }
 
-export default function CalendarView({ onOpenPage, bump }) {
+export default function CalendarView({ onOpenPage }) {
   const t = parseISO(todayISO());
   const [view, setView] = useState({ year: t.getFullYear(), month: t.getMonth() + 1 });
 

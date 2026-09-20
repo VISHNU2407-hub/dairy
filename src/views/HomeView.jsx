@@ -5,7 +5,7 @@ import { settings as getSettings, sortedEntries, getEntry, entriesInMonth } from
 import { todayISO, fmtLong, greeting, plural } from '../lib/utils.js';
 import EntryRow from './EntryRow.jsx';
 
-export default function HomeView({ onOpenPage, bump }) {
+export default function HomeView({ onOpenPage }) {
   const s = getSettings();
   const today = todayISO();
 

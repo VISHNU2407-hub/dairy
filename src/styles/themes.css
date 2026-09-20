@@ -1,0 +1,382 @@
+/* =========================================================
+   styles/themes.css — theme variables, fonts and paper styles
+   (restored from the last known-good build bundle)
+   ========================================================= */
+:root {
+  color-scheme:light;
+  --font-ui: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  --font-display: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  --font-body: Georgia, "Times New Roman", serif;
+  --app-bg: #efe6d2;
+  --app-bg-soft: #e7dabf;
+  --app-ink: #3b2f20;
+  --muted: #8a7a63;
+  --panel-bg: #fffaf0;
+  --border: #d9c9ab;
+  --accent: #8b5e34;
+  --accent-hover: #774e29;
+  --accent-ink: #fff8ec;
+  --accent-soft: rgba(139, 94, 52, .14);
+  --accent-glow: rgba(139, 94, 52, .22);
+  --danger: #c0392b;
+  --shadow: 0 14px 34px rgba(80, 55, 20, .22);
+  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+  --paper: #f7efdc;
+  --paper-soft: #efe4ca;
+  --paper-glow: rgba(90, 60, 20, .07);
+  --ink: #3a2f22;
+  --ink-muted: #7d6f57;
+  --ink-weak: rgba(90, 70, 40, .35);
+  --ink-faint: rgba(90, 70, 40, .22);
+  --ruling: rgba(142, 112, 74, .3);
+  --margin: rgba(178, 84, 66, .5);
+  --cover-bg: #5b3a24;
+  --cover-bg2: #3f2817;
+  --cover-ink: #f5e6c4;
+  --cover-muted: #c9ab7c;
+  --cover-accent: #e6bd4f;
+  --cover-line: rgba(240, 210, 160, .35);
+  --ribbon: #a33d2e;
+  --ribbon-dark: #7a2b20}
+html[data-theme=minimal] {
+  --app-bg: #f7f7f8;
+  --app-bg-soft: #eeeeef;
+  --app-ink: #2b2b2e;
+  --muted: #86868b;
+  --panel-bg: #ffffff;
+  --border: #e4e4e6;
+  --accent: #3f3f46;
+  --accent-hover: #24242a;
+  --accent-ink: #ffffff;
+  --accent-soft: rgba(0, 0, 0, .06);
+  --accent-glow: rgba(0, 0, 0, .12);
+  --shadow: 0 12px 30px rgba(20, 20, 25, .14);
+  --paper: #fffefe;
+  --paper-soft: #f5f5f6;
+  --paper-glow: rgba(0, 0, 0, .03);
+  --ink: #2b2b2e;
+  --ink-muted: #76767c;
+  --ink-weak: rgba(0, 0, 0, .2);
+  --ink-faint: rgba(0, 0, 0, .15);
+  --ruling: #e3e3e6;
+  --margin: #b9b9c2;
+  --cover-bg: #2f2f33;
+  --cover-bg2: #17171a;
+  --cover-ink: #f5f5f6;
+  --cover-muted: #b5b5bd;
+  --cover-accent: #dcdce2;
+  --cover-line: rgba(255, 255, 255, .14);
+  --ribbon: #8e8e96;
+  --ribbon-dark: #5d5d64}
+html[data-theme=pastel] {
+  --app-bg: #f6edea;
+  --app-bg-soft: #efdfda;
+  --app-ink: #553f3d;
+  --muted: #9c7f7d;
+  --panel-bg: #fff9f7;
+  --border: #ecd9d2;
+  --accent: #b76a85;
+  --accent-hover: #a2536f;
+  --accent-ink: #fff;
+  --accent-soft: rgba(183, 106, 133, .15);
+  --accent-glow: rgba(183, 106, 133, .25);
+  --shadow: 0 14px 34px rgba(160, 110, 130, .2);
+  --paper: #fdf3f0;
+  --paper-soft: #f7e8e2;
+  --paper-glow: rgba(190, 120, 140, .06);
+  --ink: #5a4444;
+  --ink-muted: #9c7f7d;
+  --ink-weak: rgba(160, 110, 120, .32);
+  --ink-faint: rgba(160, 110, 120, .18);
+  --ruling: rgba(212, 150, 162, .32);
+  --margin: rgba(205, 120, 145, .55);
+  --cover-bg: #c989a5;
+  --cover-bg2: #9d5f7d;
+  --cover-ink: #fff6f3;
+  --cover-muted: #f0cdd8;
+  --cover-accent: #fff0e8;
+  --cover-line: rgba(255, 255, 255, .42);
+  --ribbon: #e18da6;
+  --ribbon-dark: #c46f8b}
+html[data-theme=vintage] {
+  --font-display: "Courier New", Courier, monospace;
+  --app-bg: #e7dcc3;
+  --app-bg-soft: #d9cba9;
+  --app-ink: #473922;
+  --muted: #8f7c55;
+  --panel-bg: #f6ecd4;
+  --border: #cab58b;
+  --accent: #68522f;
+  --accent-hover: #4f3d20;
+  --accent-ink: #f7efdc;
+  --accent-soft: rgba(104, 82, 47, .16);
+  --accent-glow: rgba(104, 82, 47, .26);
+  --shadow: 0 14px 34px rgba(90, 65, 30, .28);
+  --paper: #ecdbb4;
+  --paper-soft: #dfcaa0;
+  --paper-glow: rgba(120, 80, 30, .12);
+  --ink: #3c331f;
+  --ink-muted: #7b6a48;
+  --ink-weak: rgba(95, 75, 40, .4);
+  --ink-faint: rgba(95, 75, 40, .26);
+  --ruling: rgba(120, 95, 55, .34);
+  --margin: rgba(140, 60, 50, .55);
+  --cover-bg: #483822;
+  --cover-bg2: #2c2114;
+  --cover-ink: #ead9b0;
+  --cover-muted: #c2a873;
+  --cover-accent: #c9a24b;
+  --cover-line: rgba(220, 190, 140, .3);
+  --ribbon: #8a5f2e;
+  --ribbon-dark: #5f3c18}
+html[data-theme=midnight] {
+  color-scheme:dark;
+  --app-bg: #151823;
+  --app-bg-soft: #1a1e2c;
+  --app-ink: #dfe4f2;
+  --muted: #99a2bd;
+  --panel-bg: #20263a;
+  --border: #343d5c;
+  --accent: #8f9ef0;
+  --accent-hover: #7d8de9;
+  --accent-ink: #0b0e1a;
+  --accent-soft: rgba(143, 158, 240, .18);
+  --accent-glow: rgba(96, 112, 220, .35);
+  --shadow: 0 14px 40px rgba(0, 0, 12, .55);
+  --paper: #1c2030;
+  --paper-soft: #262b40;
+  --paper-glow: rgba(0, 0, 40, .35);
+  --ink: #d9deef;
+  --ink-muted: #96a0bd;
+  --ink-weak: rgba(200, 210, 240, .22);
+  --ink-faint: rgba(200, 210, 240, .13);
+  --ruling: rgba(150, 165, 220, .24);
+  --margin: rgba(142, 120, 240, .5);
+  --cover-bg: #0e1020;
+  --cover-bg2: #141732;
+  --cover-ink: #e6e9f8;
+  --cover-muted: #9aa3d8;
+  --cover-accent: #aab6ff;
+  --cover-line: rgba(180, 190, 255, .2);
+  --ribbon: #5d6ddb;
+  --ribbon-dark: #3d4bb0}
+html[data-theme=nature] {
+  --app-bg: #eef3e4;
+  --app-bg-soft: #e0e8cd;
+  --app-ink: #333f28;
+  --muted: #78905c;
+  --panel-bg: #fbfdf3;
+  --border: #d7e2c1;
+  --accent: #5f7d3a;
+  --accent-hover: #4d6a2e;
+  --accent-ink: #ffffff;
+  --accent-soft: rgba(95, 125, 58, .16);
+  --accent-glow: rgba(95, 125, 58, .26);
+  --shadow: 0 14px 34px rgba(70, 90, 45, .22);
+  --paper: #f4f8e7;
+  --paper-soft: #e7efd3;
+  --paper-glow: rgba(90, 120, 50, .06);
+  --ink: #33402a;
+  --ink-muted: #72805e;
+  --ink-weak: rgba(60, 85, 40, .3);
+  --ink-faint: rgba(60, 85, 40, .18);
+  --ruling: rgba(120, 150, 90, .3);
+  --margin: rgba(122, 142, 70, .55);
+  --cover-bg: #3f5a2e;
+  --cover-bg2: #27401c;
+  --cover-ink: #f1f6e4;
+  --cover-muted: #c3d3a6;
+  --cover-accent: #b7d98a;
+  --cover-line: rgba(210, 230, 170, .3);
+  --ribbon: #7a9b46;
+  --ribbon-dark: #55712c}
+html[data-font=typewriter] {
+  --font-body: "Courier New", Courier, monospace;
+  --font-display: "Courier New", Courier, monospace}
+html[data-font=handwritten] {
+  --font-body: "Segoe Script", "Bradley Hand", "Comic Sans MS", "Snell Roundhand", "Segoe Print", cursive;
+  --font-display: "Segoe Script", "BRADLEY HAND", "Comic Sans MS", cursive}
+html[data-font=modern] {
+  --font-body: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  --font-display: Georgia, "Iowan Old Style", serif}
+.tp-classic {
+  background:linear-gradient(150deg,#5b3a24,#3f2817)}
+.tp-minimal {
+  background:linear-gradient(150deg,#2f2f33,#17171a)}
+.tp-pastel {
+  background:linear-gradient(150deg,#c989a5,#9d5f7d)}
+.tp-vintage {
+  background:linear-gradient(150deg,#483822,#2c2114)}
+.tp-midnight {
+  background:linear-gradient(150deg,#0e1020,#141732)}
+.tp-nature {
+  background:linear-gradient(150deg,#3f5a2e,#27401c)}
+.t-preview .tp-line {
+  background:#ffffff6b}
+[data-paper=floral] .lined-text {
+  background-color:var(--paper);
+  background-image:radial-gradient(circle at 12px 8px,rgba(212,106,141,.2) 0 3.5px,transparent 4.5px),radial-gradient(circle at 22px 8px,rgba(212,106,141,.2) 0 3.5px,transparent 4.5px),radial-gradient(circle at 32px 8px,rgba(212,106,141,.2) 0 3.5px,transparent 4.5px),radial-gradient(circle at 17px 18px,rgba(212,106,141,.2) 0 3.5px,transparent 4.5px),radial-gradient(circle at 27px 18px,rgba(212,106,141,.2) 0 3.5px,transparent 4.5px),radial-gradient(circle at 7px 18px,rgba(212,106,141,.2) 0 3.5px,transparent 4.5px),radial-gradient(circle at 37px 18px,rgba(212,106,141,.2) 0 3.5px,transparent 4.5px),radial-gradient(circle at 22px 28px,rgba(250,222,130,.5) 0 3px,transparent 4px),radial-gradient(circle at 78px 88px,rgba(212,106,141,.16) 0 5px,transparent 6px),radial-gradient(circle at 66px 78px,rgba(212,106,141,.16) 0 4px,transparent 5px),radial-gradient(circle at 90px 78px,rgba(212,106,141,.16) 0 4px,transparent 5px);
+  background-size:110px 110px;
+  background-position:0 0}
+[data-paper=hearts] .lined-text {
+  background-color:var(--paper);
+  background-image:radial-gradient(circle at 10px 7px,rgba(212,106,141,.22) 0 4.5px,transparent 5.5px),radial-gradient(circle at 19px 7px,rgba(212,106,141,.22) 0 4.5px,transparent 5.5px),linear-gradient(213deg,transparent 6px,rgba(212,106,141,.22) 6.5px 11px,transparent 11.5px),linear-gradient(147deg,transparent 6px,rgba(212,106,141,.22) 6.5px 11px,transparent 11.5px),radial-gradient(circle at 52px 58px,rgba(212,106,141,.13) 0 3px,transparent 4px),radial-gradient(circle at 58px 58px,rgba(212,106,141,.13) 0 3px,transparent 4px),linear-gradient(213deg,transparent 4px,rgba(212,106,141,.13) 4.5px 7.5px,transparent 8px),linear-gradient(147deg,transparent 4px,rgba(212,106,141,.13) 4.5px 7.5px,transparent 8px);
+  background-size:84px 84px;
+  background-position:0 0}
+[data-paper=teddy] .lined-text {
+  background-color:var(--paper);
+  background-image:radial-gradient(circle at 11px 8px,rgba(150,105,60,.26) 0 4px,transparent 5px),radial-gradient(circle at 25px 8px,rgba(150,105,60,.26) 0 4px,transparent 5px),radial-gradient(circle at 18px 18px,rgba(150,105,60,.26) 0 7px,transparent 8px),radial-gradient(circle at 18px 21px,rgba(250,240,224,.5) 0 3.5px,transparent 4.5px),radial-gradient(circle at 18px 24px,rgba(60,40,25,.3) 0 1.6px,transparent 2.6px),radial-gradient(circle at 65px 62px,rgba(150,105,60,.14) 0 3px,transparent 4px),radial-gradient(circle at 73px 62px,rgba(150,105,60,.14) 0 3px,transparent 4px),radial-gradient(circle at 69px 68px,rgba(150,105,60,.14) 0 5px,transparent 6px);
+  background-size:96px 96px;
+  background-position:0 0}
+[data-paper=stars] .lined-text {
+  background-color:var(--paper);
+  background-image:radial-gradient(circle at 14px 10px,rgba(212,175,55,.4) 0 2px,transparent 3px),radial-gradient(circle at 46px 28px,rgba(212,175,55,.3) 0 1.4px,transparent 2.4px),radial-gradient(circle at 72px 12px,rgba(212,175,55,.35) 0 1.8px,transparent 2.8px),radial-gradient(circle at 30px 52px,rgba(212,175,55,.28) 0 1.4px,transparent 2.4px),radial-gradient(circle at 84px 44px,rgba(212,175,55,.32) 0 2px,transparent 3px),radial-gradient(circle at 60px 72px,rgba(212,175,55,.26) 0 1.4px,transparent 2.4px),radial-gradient(circle at 8px 66px,rgba(212,175,55,.3) 0 1.6px,transparent 2.6px),radial-gradient(circle at 92px 84px,rgba(212,175,55,.34) 0 1.8px,transparent 2.8px);
+  background-size:110px 110px;
+  background-position:0 0}
+[data-paper=clouds] .lined-text {
+  background-color:var(--paper);
+  background-image:radial-gradient(circle at 22px 22px,rgba(140,170,205,.16) 0 12px,transparent 13px),radial-gradient(circle at 40px 26px,rgba(140,170,205,.16) 0 9px,transparent 10px),radial-gradient(circle at 56px 22px,rgba(140,170,205,.16) 0 11px,transparent 12px),radial-gradient(circle at 64px 82px,rgba(140,170,205,.11) 0 8px,transparent 9px),radial-gradient(circle at 78px 84px,rgba(140,170,205,.11) 0 6px,transparent 7px),radial-gradient(circle at 52px 86px,rgba(140,170,205,.11) 0 7px,transparent 8px);
+  background-size:130px 120px;
+  background-position:0 0}
+[data-paper=rainbow] .lined-text {
+  background-color:var(--paper);
+  background-image:radial-gradient(circle at 0 0,transparent 0 34px,rgba(255,179,186,.3) 34px 40px,transparent 40.5px),radial-gradient(circle at 0 0,transparent 0 40px,rgba(255,223,186,.3) 40px 46px,transparent 46.5px),radial-gradient(circle at 0 0,transparent 0 46px,rgba(255,255,186,.3) 46px 52px,transparent 52.5px),radial-gradient(circle at 0 0,transparent 0 52px,rgba(186,225,255,.3) 52px 58px,transparent 58.5px),radial-gradient(circle at 0 0,transparent 0 58px,rgba(211,186,255,.3) 58px 64px,transparent 64.5px);
+  background-size:140px 140px;
+  background-position:0 0}
+[data-paper=butterfly] .lined-text {
+  background-color:var(--paper);
+  background-image:radial-gradient(circle at 14px 9px,rgba(150,120,200,.2) 0 4px,transparent 5px),radial-gradient(circle at 26px 9px,rgba(150,120,200,.2) 0 4px,transparent 5px),radial-gradient(circle at 15px 19px,rgba(150,120,200,.16) 0 3.2px,transparent 4.2px),radial-gradient(circle at 25px 19px,rgba(150,120,200,.16) 0 3.2px,transparent 4.2px),radial-gradient(circle at 20px 14px,rgba(110,85,160,.28) 0 2px,transparent 3px),radial-gradient(circle at 62px 66px,rgba(150,120,200,.12) 0 2.6px,transparent 3.6px),radial-gradient(circle at 69px 66px,rgba(150,120,200,.12) 0 2.6px,transparent 3.6px),radial-gradient(circle at 65.5px 70px,rgba(110,85,160,.2) 0 1.4px,transparent 2.4px);
+  background-size:92px 92px;
+  background-position:0 0}
+[data-paper=strawberry] .lined-text {
+  background-color:var(--paper);
+  background-image:radial-gradient(circle at 16px 20px,rgba(150,45,65,.22) 0 1px,transparent 2px),radial-gradient(circle at 24px 19px,rgba(150,45,65,.22) 0 1px,transparent 2px),radial-gradient(circle at 20px 27px,rgba(150,45,65,.22) 0 1px,transparent 2px),radial-gradient(circle at 20px 11px,rgba(110,165,90,.35) 0 3px,transparent 4px),radial-gradient(circle at 20px 22px,rgba(214,80,104,.2) 0 9px,transparent 10px),radial-gradient(circle at 74px 69px,rgba(110,165,90,.28) 0 2px,transparent 3px),radial-gradient(circle at 74px 76px,rgba(214,80,104,.14) 0 6px,transparent 7px);
+  background-size:104px 104px;
+  background-position:0 0}
+[data-paper=moon] .lined-text {
+  background-color:var(--paper);
+  background-image:radial-gradient(circle at 28px 17px,var(--paper) 0 9px,transparent 10px),radial-gradient(circle at 22px 22px,rgba(212,175,55,.3) 0 10px,transparent 11px),radial-gradient(circle at 69.5px 59px,var(--paper) 0 5.4px,transparent 6.4px),radial-gradient(circle at 66px 62px,rgba(212,175,55,.22) 0 6px,transparent 7px),radial-gradient(circle at 52px 14px,rgba(212,175,55,.3) 0 1.6px,transparent 2.6px),radial-gradient(circle at 90px 34px,rgba(212,175,55,.26) 0 1.4px,transparent 2.4px),radial-gradient(circle at 14px 78px,rgba(212,175,55,.26) 0 1.5px,transparent 2.5px);
+  background-size:120px 120px;
+  background-position:0 0}
+.tp-romance {
+  background:linear-gradient(150deg,#d98ab0,#b85f8e)}
+.tp-rosegarden {
+  background:linear-gradient(150deg,#e0a9bd,#b96f8f)}
+.tp-teddy {
+  background:linear-gradient(150deg,#a97d5f,#7c5a40)}
+.tp-girly {
+  background:linear-gradient(150deg,#e6a8c8,#c37ba6)}
+html[data-theme=romance] {
+  --app-bg: #faeef2;
+  --app-bg-soft: #f5dfe6;
+  --app-ink: #4a2733;
+  --muted: #a06a7d;
+  --panel-bg: #fff7f9;
+  --border: #ecd0da;
+  --accent: #d46a8d;
+  --accent-hover: #bf5478;
+  --accent-ink: #fff7fa;
+  --accent-soft: rgba(212, 106, 141, .15);
+  --accent-glow: rgba(212, 106, 141, .25);
+  --shadow: 0 14px 34px rgba(150, 70, 100, .2);
+  --paper: #fdf3f6;
+  --paper-soft: #f7e4ea;
+  --paper-glow: rgba(212, 106, 141, .05);
+  --ink: #4a2733;
+  --ink-muted: #9a6a7a;
+  --ink-weak: rgba(150, 75, 100, .28);
+  --ink-faint: rgba(150, 75, 100, .16);
+  --ruling: rgba(212, 106, 141, .28);
+  --margin: rgba(204, 111, 146, .55);
+  --cover-bg: #c96a8f;
+  --cover-bg2: #a85074;
+  --cover-ink: #fff6f8;
+  --cover-muted: #f2c9d6;
+  --cover-accent: #ffd9e3;
+  --cover-line: rgba(255, 220, 232, .35);
+  --ribbon: #d4698e;
+  --ribbon-dark: #ab4f72}
+html[data-theme=rosegarden] {
+  --app-bg: #fdf1ec;
+  --app-bg-soft: #f8e0d7;
+  --app-ink: #4f2b21;
+  --muted: #b0725d;
+  --panel-bg: #fff9f5;
+  --border: #f0d2c4;
+  --accent: #d4704f;
+  --accent-hover: #bd5c3c;
+  --accent-ink: #fffaf7;
+  --accent-soft: rgba(212, 112, 79, .15);
+  --accent-glow: rgba(212, 112, 79, .25);
+  --shadow: 0 14px 34px rgba(160, 85, 60, .2);
+  --paper: #fef6f0;
+  --paper-soft: #f9e9df;
+  --paper-glow: rgba(212, 112, 79, .05);
+  --ink: #4f2b21;
+  --ink-muted: #a26955;
+  --ink-weak: rgba(150, 75, 50, .28);
+  --ink-faint: rgba(150, 75, 60, .16);
+  --ruling: rgba(212, 112, 79, .28);
+  --margin: rgba(194, 116, 82, .55);
+  --cover-bg: #c97047;
+  --cover-bg2: #a0512f;
+  --cover-ink: #fff8f3;
+  --cover-muted: #f0c7ae;
+  --cover-accent: #ffd9bd;
+  --cover-line: rgba(255, 214, 185, .35);
+  --ribbon: #cf7148;
+  --ribbon-dark: #a55630}
+html[data-theme=teddy] {
+  --app-bg: #f6f0e7;
+  --app-bg-soft: #eee3d3;
+  --app-ink: #47372a;
+  --muted: #9c7b5f;
+  --panel-bg: #fdf9f2;
+  --border: #e9d8c2;
+  --accent: #b07a4c;
+  --accent-hover: #97683c;
+  --accent-ink: #fffaf3;
+  --accent-soft: rgba(176, 122, 76, .15);
+  --accent-glow: rgba(176, 122, 76, .25);
+  --shadow: 0 14px 34px rgba(130, 90, 55, .2);
+  --paper: #faf4e9;
+  --paper-soft: #f1e6d4;
+  --paper-glow: rgba(176, 122, 76, .05);
+  --ink: #47372a;
+  --ink-muted: #93734f;
+  --ink-weak: rgba(130, 95, 55, .28);
+  --ink-faint: rgba(130, 95, 65, .16);
+  --ruling: rgba(150, 105, 60, .26);
+  --margin: rgba(150, 110, 68, .5);
+  --cover-bg: #9a6e44;
+  --cover-bg2: #7a532f;
+  --cover-ink: #fdf6ec;
+  --cover-muted: #e0c19b;
+  --cover-accent: #f0d3a8;
+  --cover-line: rgba(240, 205, 160, .35);
+  --ribbon: #a87748;
+  --ribbon-dark: #835930}
+html[data-font=girly] {
+  --font-body: "Segoe Script", "Bradley Hand", "Segoe Print", "Comic Sans MS", "Chalkboard SE", cursive;
+  --font-display: "Segoe Script", "Bradley Hand", "Lucida Handwriting", "Comic Sans MS", cursive}
+html[data-font=elegant] {
+  --font-body: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
+  --font-display: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif}
+html[data-font=rounded] {
+  --font-body: "Trebuchet MS", "Segoe UI", Verdana, "Comic Sans MS", sans-serif;
+  --font-display: "Trebuchet MS", Verdana, "Segoe UI", sans-serif}
+html[data-font=marker] {
+  --font-body: "Comic Sans MS", "Chalkboard SE", "Segoe Print", "Marker Felt", cursive;
+  --font-display: "Comic Sans MS", "Chalkboard SE", "Segoe Print", cursive}
+html[data-font=cleanmono] {
+  --font-body: Consolas, "Liberation Mono", Menlo, "Courier New", monospace;
+  --font-display: Consolas, Menlo, "Courier New", monospace}
+html[data-font=fancy] {
+  --font-body: "Lucida Handwriting", "Brush Script MT", "Segoe Script", cursive;
+  --font-display: "Lucida Handwriting", "Brush Script MT", "Segoe Script", cursive}
+html[data-font=neat] {
+  --font-body: Verdana, Geneva, Tahoma, sans-serif;
+  --font-display: Verdana, Geneva, Tahoma, sans-serif}
+html[data-font=storybook] {
+  --font-body: "Bookman Old Style", "Book Antiqua", Georgia, serif;
+  --font-display: "Bookman Old Style", "Book Antiqua", Georgia, serif}

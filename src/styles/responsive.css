@@ -1,0 +1,112 @@
+/* =========================================================
+   styles/responsive.css — responsive breakpoints
+   (restored from the last known-good build bundle)
+   ========================================================= */
+@media (max-width: 900px) {
+  .theme-grid {
+  grid-template-columns:repeat(2,1fr)}
+.view {
+  padding:26px 16px 130px}
+}
+@media (max-width: 720px) {
+  body {
+  line-height:1.55}
+.topnav {
+  display:none}
+.bottomnav {
+  display:flex}
+.appbar {
+  padding:8px 10px}
+.appbar-title {
+  font-size:1.1rem}
+.lock-txt {
+  display:none}
+.btn-lock {
+  padding:8px 12px}
+.view {
+  padding:20px 12px 124px}
+.welcome-card {
+  padding:38px 24px 36px}
+.setup-card {
+  padding:26px 20px 30px}
+.theme-pick {
+  grid-template-columns:repeat(3,1fr);
+  gap:8px}
+.cover {
+  padding:44px 24px 32px}
+.cover-title {
+  font-size:1.7rem}
+.home-title {
+  font-size:1.6rem}
+.home-greeting {
+  padding:16px 0 4px}
+.stat-pill {
+  padding:8px 12px;
+  font-size:.8rem}
+.entry-item {
+  padding:13px 14px;
+  gap:12px}
+.entry-item-date {
+  width:52px}
+.page-toolbar {
+  gap:6px;
+  margin-bottom:14px}
+.page-toolbar .btn {
+  padding:9px 12px;
+  font-size:.86rem}
+.btn-nav-today {
+  min-width:66px}
+.diary-page {
+  padding:30px 20px 24px}
+.p-date {
+  font-size:1.25rem}
+.p-title-input,.p-title-view {
+  font-size:1.35rem}
+.lined-text {
+  --ml: 44px;
+  font-size:.98rem}
+.page-tools {
+  gap:8px}
+.page-tools .btn {
+  flex:1 1 auto}
+.details-grid {
+  grid-template-columns:1fr}
+.theme-grid {
+  grid-template-columns:repeat(2,1fr);
+  gap:10px}
+.settings-section {
+  padding:16px}
+.setting-row {
+  flex-direction:column;
+  align-items:flex-start;
+  gap:8px}
+.setting-row .btn {
+  width:100%}
+.modal {
+  padding:22px 18px 18px}
+.modal-actions {
+  flex-direction:column-reverse}
+.modal-actions .btn {
+  min-width:100%}
+}
+@media (max-width: 420px) {
+  .theme-pick,.theme-grid {
+  grid-template-columns:repeat(2,1fr)}
+.diary-page {
+  padding:24px 16px 20px}
+.lined-text {
+  --ml: 36px;
+  font-size:.95rem}
+.page-toolbar .btn {
+  padding:8px 9px;
+  font-size:.8rem}
+.welcome-card h1 {
+  font-size:1.55rem}
+}
+@media (min-width: 721px) and (max-height: 760px) {
+  .cover-stage {
+  padding:24px 16px}
+.cover {
+  padding-top:40px;
+  padding-bottom:30px}
+}

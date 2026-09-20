@@ -87,12 +87,12 @@ export default function DiaryShell({ onLock, goWelcome }) {
       </header>
 
       <main id="app-main" role="main" tabIndex={-1}>
-        {view === 'home' && <HomeView onOpenPage={openPage} bump={bump} />}
+        {view === 'home' && <HomeView onOpenPage={openPage} />}
         {view === 'page' && <DiaryPageView date={pageDate} onNavigate={setPageDate} bump={bump} />}
-        {view === 'calendar' && <CalendarView onOpenPage={openPage} bump={bump} />}
-        {view === 'entries' && <EntriesView onOpenPage={openPage} bump={bump} />}
-        {view === 'favorites' && <FavoritesView onOpenPage={openPage} bump={bump} />}
-        {view === 'search' && <SearchView onOpenPage={openPage} bump={bump} />}
+        {view === 'calendar' && <CalendarView onOpenPage={openPage} />}
+        {view === 'entries' && <EntriesView onOpenPage={openPage} />}
+        {view === 'favorites' && <FavoritesView onOpenPage={openPage} />}
+        {view === 'search' && <SearchView onOpenPage={openPage} />}
         {view === 'themes' && <ThemesView />}
         {view === 'settings' && (
           <SettingsView

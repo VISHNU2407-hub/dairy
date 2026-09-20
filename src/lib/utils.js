@@ -83,16 +83,6 @@ export function pad3(n) { return String(n).padStart(3, '0'); }
 export function plural(n, word) { return n + ' ' + word + (n === 1 ? '' : 's'); }
 export function clamp(n, min, max) { return Math.min(max, Math.max(min, n)); }
 
-export function debounce(fn, wait) {
-  let t = null;
-  return function () {
-    const args = arguments;
-    const ctx = this;
-    clearTimeout(t);
-    t = setTimeout(function () { fn.apply(ctx, args); }, wait);
-  };
-}
-
 export function highlight(text, query) {
   const safe = escapeHTML(text);
   const q = String(query || '').trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
