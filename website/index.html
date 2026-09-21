@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Diary — Free private diary app for Windows &amp; Android</title>
+  <meta name="description" content="A private, password-protected diary app. Free, offline, no account needed. Download for Windows or Android.">
+  <meta name="theme-color" content="#5b3a24">
+  <style>
+    :root {
+      --brown: #5b3a24;
+      --brown-dark: #3e2718;
+      --cream: #f7f1e5;
+      --paper: #fffdf7;
+      --ink: #2a1f16;
+      --accent: #b07d4f;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background:
+        radial-gradient(1200px 500px at 50% -10%, rgba(176,125,79,0.14), transparent 60%),
+        var(--cream);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+    }
+
+    main {
+      flex: 1; display: flex; align-items: center; justify-content: center;
+      padding: 40px 20px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid rgba(91,58,36,0.18);
+      border-radius: 20px;
+      box-shadow: 0 24px 60px rgba(62,39,24,0.16);
+      max-width: 560px; width: 100%;
+      text-align: center;
+      padding: 44px 40px 36px;
+    }
+    .logo { width: 84px; height: 84px; border-radius: 18px; display: block; margin: 0 auto 18px; box-shadow: 0 8px 20px rgba(62,39,24,0.25); }
+    h1 { color: var(--brown); font-size: 2rem; margin-bottom: 6px; }
+    .tagline { font-style: italic; color: var(--accent); font-size: 1.05rem; margin-bottom: 14px; }
+    .pitch { color: #5c4f43; font-size: 0.98rem; line-height: 1.55; margin-bottom: 26px; }
+
+    .dl { display: flex; flex-direction: column; gap: 12px; }
+    .btn {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 15px 20px; border-radius: 12px;
+      font-size: 1.05rem; font-family: inherit; text-decoration: none;
+      border: 2px solid transparent; transition: all 0.18s;
+    }
+    .btn small { font-weight: normal; opacity: 0.75; font-size: 0.8rem; }
+    .btn-win { background: var(--brown); color: var(--cream); }
+    .btn-win:hover { background: var(--brown-dark); transform: translateY(-2px); box-shadow: 0 8px 18px rgba(62,39,24,0.3); }
+    .btn-android { background: var(--paper); color: var(--brown); border-color: var(--brown); }
+    .btn-android:hover { background: var(--brown); color: var(--cream); transform: translateY(-2px); box-shadow: 0 8px 18px rgba(62,39,24,0.3); }
+    .btn-web { background: transparent; color: var(--brown); border-color: rgba(91,58,36,0.35); padding: 11px 20px; font-size: 0.95rem; }
+    .btn-web:hover { border-color: var(--brown); background: rgba(91,58,36,0.06); }
+
+    .trust {
+      margin-top: 22px; font-size: 0.82rem; color: #8a7d6f;
+      display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+    }
+    .trust span::before { content: '✓ '; color: var(--accent); }
+
+    footer { text-align: center; padding: 18px; font-size: 0.85rem; }
+    footer a { color: var(--brown); }
+
+    @media (max-width: 480px) {
+      .card { padding: 32px 22px 28px; }
+      h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="card">
+      <img class="logo" src="./assets/logo-512.png" alt="Digital Diary logo" width="84" height="84">
+      <h1>Digital Diary</h1>
+      <p class="tagline">Your private place for everyday thoughts.</p>
+      <p class="pitch">
+        A beautiful, password-protected diary that lives entirely on your device.
+        <strong>No account. No cloud. Free forever.</strong>
+      </p>
+
+      <div class="dl">
+        <a class="btn btn-win" href="https://github.com/VISHNU2407-hub/dairy/releases/latest/download/DigitalDiary-Setup.exe">
+          🪟 Download for Windows <small>.exe · Win 10/11</small>
+        </a>
+        <a class="btn btn-android" href="./releases/digital-diary-1.0.0.apk" download>
+          🤖 Download for Android <small>APK · 6.0+</small>
+        </a>
+        <a class="btn btn-web" href="./app/">or use it in your browser →</a>
+      </div>
+
+      <div class="trust">
+        <span>Free</span><span>Offline</span><span>Private</span><span>No ads</span>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <a href="./features.html">Features, screenshots &amp; FAQ →</a>
+  </footer>
+</body>
+</html>

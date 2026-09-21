@@ -3,17 +3,72 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "description": "A private, personal digital diary — web, Windows desktop and Android.",
+  "main": "electron/main.cjs",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "icons": "node scripts/generate-icons.cjs",
+    "electron:dev": "electron .",
+    "electron:build": "npm run build && electron-builder --win",
+    "electron:start": "npm run build && electron .",
+    "cap:sync": "npm run build && npx cap sync android",
+    "cap:android": "npx cap open android",
+    "cap:apk": "npm run build && npx cap sync android && cd android && gradlew.bat assembleDebug",
+    "website": "npx serve website",
+    "vercel-build": "npm run build && rm -rf website/app && cp -r dist website/app"
   },
   "dependencies": {
+    "@capacitor/core": "^7.4.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@capacitor/android": "^7.4.4",
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^7.4.4",
     "@vitejs/plugin-react": "^4.3.4",
+    "electron": "^38.2.0",
+    "electron-builder": "^26.0.12",
     "vite": "^5.4.11"
+  },
+  "build": {
+    "appId": "com.digitaldiary.app",
+    "productName": "Digital Diary",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "win": {
+      "icon": "electron/icons/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Digital Diary"
+    }
+  },
+  "allowScripts": {
+    "electron@38.8.6": true
   }
 }
