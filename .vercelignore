@@ -1,0 +1,9 @@
+# never upload local build artifacts or the Android/Gradle tree
+android
+release
+dist
+website/app
+website/releases/*.exe
+node_modules
+.git
+/tmp

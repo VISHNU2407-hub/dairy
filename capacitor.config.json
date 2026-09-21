@@ -1,0 +1,11 @@
+{
+  "appId": "com.digitaldiary.app",
+  "appName": "Digital Diary",
+  "webDir": "dist",
+  "android": {
+    "allowMixedContent": false
+  },
+  "server": {
+    "androidScheme": "https"
+  }
+}

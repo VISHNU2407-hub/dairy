@@ -1,0 +1,82 @@
+name: Build & Publish Release
+
+# Push a version tag to trigger:
+#   git tag v1.0.1 && git push origin v1.0.1
+# Builds the Windows installer and Android APK, then attaches
+# both to a GitHub Release. The promo site links to
+# .../releases/latest/download/DigitalDiary-Setup-1.0.0.exe
+# so the download button updates automatically.
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build web app + desktop icons
+        run: |
+          npm run build
+          npm run icons
+
+      - name: Build Windows installer
+        run: npx electron-builder --win
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Prepare Android project
+        run: |
+          npx cap add android
+          npx @capacitor/assets generate --android --iconBackgroundColor '#f7f1e5' --splashBackgroundColor '#f7f1e5' --splashBackgroundColorDark '#241610'
+          npx cap sync android
+
+      - name: Build Android APK
+        run: cd android && gradlew.bat assembleDebug --no-daemon
+
+      - name: Rename release assets (stable names for download links)
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path relout | Out-Null
+          Copy-Item "release/Digital Diary Setup 1.0.0.exe" relout/DigitalDiary-Setup.exe
+          Copy-Item "release/Digital Diary 1.0.0.exe" relout/DigitalDiary-Portable.exe
+          Copy-Item "android/app/build/outputs/apk/debug/app-debug.apk" relout/DigitalDiary.apk
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            relout/DigitalDiary-Setup.exe
+            relout/DigitalDiary-Portable.exe
+            relout/DigitalDiary.apk
+          body: |
+            ## Downloads
+
+            | Platform | File |
+            |---|---|
+            | Windows installer | DigitalDiary-Setup-1.0.0.exe |
+            | Windows portable | Digital Diary 1.0.0.exe |
+            | Android (debug APK) | app-debug.apk |
+
+            Windows builds are unsigned — SmartScreen may show
+            "More info → Run anyway" on first launch.
+          draft: false
+          prerelease: false

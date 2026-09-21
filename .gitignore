@@ -3,6 +3,7 @@ node_modules
 
 # build output
 dist
+release
 
 # logs
 *.log
@@ -18,3 +19,13 @@ Thumbs.db
 .env
 .env.local
 .env.*.local
+.vercel
+
+# capacitor / android build output (regenerated, huge)
+android/
+android/app/build/
+.capacitor
+
+# big installers are shipped via GitHub Releases, not git/vercel
+website/releases/*.exe
+relout/
